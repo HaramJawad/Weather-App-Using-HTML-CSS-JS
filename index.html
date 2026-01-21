@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Using API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="logo">
+        </div>
+        <div class="units">
+            <img class="unit-icon" src="assets/images/icon-units.svg" alt="icon-units" />
+            <select id="unitsDropdown" data-testid="units-dropdown" name="unitsDropdownName">
+                <option value="" selected disabled hidden>Units</option>
+                <option value="" disabled>Temperature</option>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="temp-fahrenheit">Fahrenheit (°F)</option>
+                <option value="" disabled>Wind Speed</option>
+                <option value="kph">kph</option>
+                <option value="wind-mph">mph</option>
+                <option value="" disabled>Precipitation</option>
+                <option value="mm">Millimeters (mm)</option>
+                <option value="precip-in">Inches (in)</option>
+            </select>
+        </div>
+    </header>
+    <div class="search-section">
+        <h1>How's the sky looking today?</h1>
+        <div class="search-container">
+            <div class="inputDiv">
+                <input class="search-input" type="text" data-testid="search-input" placeholder="Search for a place..." />
+                <img src="assets/images/icon-search.svg" alt="icon-search">
+            </div>
+            <div class="buttonDiv">
+                <button class="search-button" data-testid="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="weather-details" data-testid="weather-details">
+        <div class="section-one">
+            <div class="img-section">
+                 <img  class="loading-image" src="assets/images/icon-loading.svg" alt="loading">
+                 <h2 class="loading-heading">Loading...</h2>
+                <div class="cityCountryDateInfoContainer">
+                    <div class="countryCityDateDiv"></div>
+                    <div class="temperatureDiv"></div>
+                </div>
+            </div>
+            <div class="current-conditions" data-testid="current-conditions">
+                <div class=" conditions feels-like">
+                    <p class="grey">Feels Like</p>
+                    <p id="feel-like-temp">__</p>
+                </div>
+                <div class=" conditions humidity">
+                    <p class="grey">Humidity</p>
+                    <p id="humidity-temp">__</p>
+                </div>
+                <div class="conditions  wind">
+                    <p class="grey">Wind</p>
+                    <p id="wind-temp">__</p>
+                </div>
+                <div class=" conditions precipitation">
+                    <p class="grey">precipitation</p>
+                    <p id="precipitation-temp">__</p>
+                </div>
+            </div>
+            <div class="daily-forecast">
+                <h2>Daily forecast</h2>
+                <div class="daily-forecast-grid-container" data-testid="daily-forecast">
+                    <div class="daily-forecast-grid-item  one"></div>
+                    <div class=" daily-forecast-grid-item two"></div>
+                    <div class=" daily-forecast-grid-item three"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section-two">
+            <div class="hourly-forecast-heading-container">
+                <p>Hourly Forecast</p>
+                <select id="days" data-testid="days-dropdown" name="days-names"></select>
+            </div>
+            <div class="hourly-forecast-container" data-testid="hourly-forecast">
+                <div class="forecast first">
+                </div>
+                <div class="forecast second">
+                </div>
+                <div class="forecast third">
+                </div>
+                <div class="forecast fourth">
+                </div>
+                <div class="forecast fifth">
+                </div>
+                <div class="forecast sixth">
+                </div>
+                <div class="forecast seventh">
+                </div>
+                <div class="forecast eighth">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
