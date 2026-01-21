@@ -6,7 +6,7 @@ HOW TO USE:
 Enter the name of a city in the search bar. Click Search. See the current weather and forecast. Change units from the dropdown if needed.
 
 TECH STACK: 
-HTML5 for structure, CSS3 for styling and responsive design, JavaScript for fetching data from WeatherAPI and updating UI dynamically.
+HTML5 for structure, CSS3 for styling, JavaScript for fetching data from WeatherAPI and updating UI dynamically.
 
 API USED:
 WeatherAPI – Free plan for getting weather data. 
