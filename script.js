@@ -102,7 +102,7 @@ function searchInProgress() {
 }
 // fetching the weather data from API
 async function fetchingWeatherData(searchInputValue) {
-    const API_KEY = "YOUR_API_KEY_HERE";
+    const API_KEY= " 1091456eff56477aa2f183259262201"
     try {
         const response = await fetch(
             `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInputValue}&days=7&aqi=yes&alerts=yes`
